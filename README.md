@@ -16,7 +16,7 @@ You can download a pre-compiled binary and then follow the directions in
 
 | Binary | `sha256sum` |
 |--------|-------------|
-| [fsnotifier-ppc64le](https://github.com/vddvss/fsnotifier-ppc64le/releases/20190907.1708/fsnotifier-ppc64le) | `b890d2852942b1613f714f83eb739b288a2b5c486fbce155986db5782f29ae5b` |
+| [fsnotifier-ppc64le](https://github.com/vddvss/fsnotifier-ppc64le/releases/download/20190907.1708/fsnotifier-ppc64le) | `b890d2852942b1613f714f83eb739b288a2b5c486fbce155986db5782f29ae5b` |
 
 ## Building from source
 
