@@ -1,21 +1,7 @@
-/*
- * Copyright 2000-2016 JetBrains s.r.o.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+// Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
 
 /*
- * Copied from https://github.com/JetBrains/intellij-community/blob/8bccacc45e0e9d93fdc68103eca440aa65fd3acd/native/fsNotifier/linux/main.c
+ * Copied from https://github.com/JetBrains/intellij-community/blob/de98ec1d976be1dfa7feeb12bb2c05feb7256965/native/fsNotifier/linux/main.c
  */
 
 #include "fsnotifier.h"
@@ -409,7 +395,7 @@ static bool register_roots(array* new_roots, array* unwatchable, array* mounts) 
 static bool is_watchable(const char* fs) {
   // don't watch special and network filesystems
   return !(strncmp(fs, "dev", 3) == 0 || strcmp(fs, "proc") == 0 || strcmp(fs, "sysfs") == 0 || strcmp(fs, MNTTYPE_SWAP) == 0 ||
-           (strncmp(fs, "fuse", 4) == 0 && strcmp(fs, "fuseblk") != 0) ||
+           (strncmp(fs, "fuse", 4) == 0 && strcmp(fs + 4, "blk") != 0 && strcmp(fs + 4, ".osxfs") != 0) ||
            strcmp(fs, "cifs") == 0 || strcmp(fs, MNTTYPE_NFS) == 0);
 }
 

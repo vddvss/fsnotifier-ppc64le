@@ -15,7 +15,7 @@
  */
 
 /*
- * Copied from https://github.com/JetBrains/intellij-community/blob/8bccacc45e0e9d93fdc68103eca440aa65fd3acd/native/fsNotifier/linux/inotify.c
+ * Copied from https://github.com/JetBrains/intellij-community/blob/de98ec1d976be1dfa7feeb12bb2c05feb7256965/native/fsNotifier/linux/inotify.c
  */
 
 #include "fsnotifier.h"
